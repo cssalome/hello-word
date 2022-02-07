@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from "react";
+import "./App.css";
 
 function App() {
+  const [saludo, setSaludo] = useState('');
+  
+  useEffect (() => { 
+    setSaludo ('¡Hello World!😀')
+  },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+   <>
+   <h1>Hello Word, App</h1>
+
+   <div className="card">
+   <p>{saludo}</p>
+   </div>
+   </>
+    )
 }
 
 export default App;
